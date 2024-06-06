@@ -1,0 +1,19 @@
+cosnt { ethers }  = require ("hardhat"); 
+
+async function main () {
+
+    const contract = await ethers.getContractFactory("firstNft");
+
+    const deployedContract = await contract.deploy();
+    await deployedContract.deployed();
+    console.log("NFT contract deployed to: ", deployedContract.address);
+
+
+}
+
+main ()
+.then(() => process/Exit(0))
+.cath((error)) => {
+ console.error(error);
+ process.exit(1);
+});
