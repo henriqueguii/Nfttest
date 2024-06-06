@@ -1,0 +1,11 @@
+require ("dotenv").config();
+
+module.exports = {
+  solidity: "0.8.24",
+
+  networks: {
+    Scroll sepolia testnet: 
+    url:  process.env.ALCHEMY_APY_KEY_URL,
+    accounts: [process.env.PRIVATE_KEY],
+  }
+}
